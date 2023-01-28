@@ -1,0 +1,16 @@
+.carrinho{
+    display: flex;
+    margin: 5px;
+}
+.h1{
+    margin-top: -10px;
+    margin-left: 10px;
+}
+.detalhe1{
+    margin-top: 40px;
+    margin-left: 670px;
+}
+.detalhe2{
+    margin-top: 40px;
+    margin-left: 580px;
+}

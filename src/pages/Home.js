@@ -2,14 +2,16 @@ import React from 'react';
 import ItemCard from '../ItemCard';
 import data from '../data';
 import horti from '../img/logo.jpeg';
+import '../style.css';
 
 const Home = () => {
     
     return (
         <>
             <nav class="navbar fixed-top navbar-light bg-light">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="#" >
                 <img src={horti} width="50" height="30" class="d-inline-block align-top" alt=""/>
+                &nbsp;
                 HORTIFRUTI DO MATOS
               </a>
             </nav>

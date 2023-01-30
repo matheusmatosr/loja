@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCart } from "react-use-cart";
 import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 import '../style.css';
+import { Alert, Collapse, IconButton } from '@mui/material';
 
 const Cart = () => {
+    const [open, setOpen] = useState();
 
     const { 
         isEmpty,
@@ -18,13 +20,16 @@ const Cart = () => {
 
     if (isEmpty) {
         return (
-            <>
-                <h1 className='text-center'>Seu carrinho está vázio!</h1>
-                &nbsp;
-                &nbsp;
+            <>  
+                <div className='carrinhoVazio'>
+                    <ShoppingCartSharpIcon />
+                    <h1 className='text-center'>Carrinho vazio!</h1>
+                </div>
                 <div className='detalhe1'>
                     <p>@ 2023 by <a href="https://www.linkedin.com/in/matheus-matos-1a523221b/">Matheus Matos</a></p>
                 </div>
+                &nbsp;
+                &nbsp;
             </>
         );
     };
@@ -82,8 +87,22 @@ const Cart = () => {
                     className='btn btn-dange(r m-2'
                     onClick={() => emptyCart()}
                 >Limpar</button>
-                <button className='btn btn-primary m-2'>Comprar</button>
+                <button 
+                    className='btn btn-primary m-2' 
+                    onClick={() => setOpen(true)}
+                >Comprar</button>
             </div>
+            <Collapse in={open}>
+              <Alert 
+                className="alert"
+                action={
+                  <IconButton onClick={() => setOpen(false)}>
+                    x
+                  </IconButton>
+                }
+              > Obrigado, compra realizada com sucesso!
+              </Alert>
+            </Collapse>
             &nbsp;
             &nbsp;
             <div className='detalhe2'>

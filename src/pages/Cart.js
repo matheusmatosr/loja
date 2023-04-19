@@ -39,12 +39,15 @@ const Cart = () => {
            <div className='row-justify-content-center'>
                 <div className='col-12'>
                     <div className='carrinho'>
-                        <ShoppingCartSharpIcon />
+                        <ShoppingCartSharpIcon style={{width:'50px', height:'50px', marginTop:'-10px', color:'red'}}/>
                         <h1 className='h1'>Carrinho de compras</h1>
                     </div>
                     &nbsp;
-                    <h5>Items: {totalUniqueItems}</h5> 
-                    <h5 margin-left="500px">Total items: {totalItems}</h5>
+                    <div className='info'>
+                        
+                        <h5 className='value'> - Items: {totalUniqueItems}</h5> 
+                        <h5 className='value' margin-left="500px"> - Total items: {totalItems}</h5>
+                    </div>
                     <table className='table table-light table-hover m-0'> 
                         <tbody>
                             {items.map((item, index) => {
@@ -53,9 +56,9 @@ const Cart = () => {
                                         <td>
                                             <img src={item.img} style={{height: '6rem'}} />
                                         </td>
-                                        <td>{item.title}</td>
-                                        <td>{item.price}</td>
-                                        <td>Qtd ({item.quantity})</td>
+                                        <td className="value">{item.title}</td>
+                                        <td className="value">{item.price}</td>
+                                        <td className="value">Qtd ({item.quantity})</td>
                                         <td>
                                             <button 
                                                 className='btn btn-info ms-2'

@@ -1,7 +1,7 @@
 import img1 from './img/img1.jpeg';
 import img2 from './img/img2.jpeg';
 import img3 from './img/img3.jpeg';
-import img4 from './img/img4.jpeg';
+import img4 from './img/img4.jpg';
 import img5 from './img/img5.jpeg';
 import img6 from './img/img6.jpeg';
 import img7 from './img/img7.jpeg';
@@ -29,6 +29,13 @@ const data = {
             title: 'Laranja',
             desc: '',
             price: 10
+        },
+        {
+            id: 4,
+            img: img4,
+            title: 'Morango',
+            desc: '',
+            price: 11
         },
         {
             id: 5,

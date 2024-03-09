@@ -1,5 +1,7 @@
 # Loja
 
+Loja de frutas, possuindo um carrinho onde é possível adicionar novos items, remover, limpar e contabilizar o valor total.
+
 ## Para rodar o projeto, siga o tutorial abaixo.
 
 ## 🖥️ Instalação
